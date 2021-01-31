@@ -1,3 +1,5 @@
+/* Header Section */
+
 h1 {
     background-color: darkgrey;
     color: white;
@@ -9,6 +11,8 @@ h1 {
 .navbar {
     width:30%
 }
+
+/* Main Section */
 
 .col-12.row {
     margin-left:100px;

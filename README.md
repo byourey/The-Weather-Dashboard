@@ -5,7 +5,7 @@
 ## Install
 
 * Clone repository to local device.
-*Open the index.html, css file and script.js file and will the weather forecast.
+* Open the index.html, css file and script.js file and will the weather forecast.
 * Enter a city name and will find the current temp, humidity, windspeed and UV Index.
 * Will also find the 5 day forecast
 
@@ -13,3 +13,4 @@
 * To my tutor, colleagues, google, W3schools and various videos on youtube.
 
 # Website
+![Image of the website](https://github.com/byourey/The-Weather-Dashboard/blob/main/Images/Weather%20Dash.jpg)
