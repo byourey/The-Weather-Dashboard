@@ -23,7 +23,7 @@ $('.d-flex').on('submit', function(e) {
       },
       success: function(data) {
 
-        let html = data.weather.map(loc => `${data.name}<img src="${loc.icon}.png"/>
+        let html = data.weather.map(loc => `${data.name}<img src="https://openweathermap.org/img/w/" + data.weather[0].icon + ".png"/>
          </p>Temperature:${data.main.temp}°F | ${loc.main}, 
          </p>Humidity:${data.main.humidity}%, 
          </p>Wind Speed:${data.wind.speed}MPH,
