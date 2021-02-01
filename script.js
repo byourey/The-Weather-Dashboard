@@ -3,6 +3,8 @@ const currentDay = dayjs().format('MM/DD/YYYY');
 
 let lat = document.querySelector('.lat');
 let lon = document.querySelector('.lon');
+var key = '88da1611665dfe9338cd6679dee95466';
+
 
 // Function to display current forecast
 
@@ -23,11 +25,10 @@ $('.d-flex').on('submit', function(e) {
       },
       success: function(data) {
 
-        let html = data.weather.map(loc => `${data.name}<img src="https://openweathermap.org/img/w/" + data.weather[0].icon + ".png"/>
+        let html = data.weather.map(loc => `${data.name}<img src="${loc.icon}.png"/>
          </p>Temperature:${data.main.temp}°F | ${loc.main}, 
          </p>Humidity:${data.main.humidity}%, 
-         </p>Wind Speed:${data.wind.speed}MPH,
-         </p>UV Index:${data.main.uvi}`);       
+         </p>Wind Speed:${data.wind.speed}MPH`);
          $("#showWeather").html(html);
       }
    
@@ -62,31 +63,7 @@ dateNow3.innerText = dayjs().add(4,'day').format('MM/DD/YYYY')
 const dateNow4 = document.querySelector('.fiveDayForecast .dateNow4');
 dateNow4.innerText = dayjs().add(5,'day').format('MM/DD/YYYY')
 
-// $('.tempDay').on('submit', function(e) {
-//     e.preventDefault();
-//     // var city = $('.inputValue1').val();
-//     var keys = 'd00b3725186bba9d9c7acbf2d2ce36e2';  
-  
-  
-//     $.ajax({
-//       url: 'https://api.openweathermap.org/data/2.5/onecall?',
-//       dataType: 'json',
-//       type: 'GET',
-//       data: {        
-//         lat: lat,
-//         lon: lon,
-//         appid: keys,
-//         // units: 'imperial'
-//       },
-//       success: function(response) {
-          
-//         let html = response.weather.map(loc => `${response.name}<img src="${loc.icon}.png" />
-//         </p>Temperature:${response.main.temp}°F | ${loc.main}, 
-//         </p>Humidity:${response.main.humidity}`)%
-//        $("#showWeather1").html(html);
-//      }
-//    });
-//  });
+
 
       
 
